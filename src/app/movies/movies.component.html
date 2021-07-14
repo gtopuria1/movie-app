@@ -1,0 +1,4 @@
+<h4>List of Movies</h4>
+<div *ngFor="let movie of movies$ | async; let i=index">
+  <span >{{i+1}}.</span> {{movie.name}}
+</div>
