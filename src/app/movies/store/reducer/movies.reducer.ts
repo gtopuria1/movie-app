@@ -1,6 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { Movie } from 'src/app/models/movie';
-import { loadMovies, loadMoviesSuccess } from '../action/movies.actions';
+import { searchMovies, loadMoviesSuccess } from '../action/movies.actions';
 
 
 export const moviesFeatureKey = 'movies';
@@ -20,7 +20,7 @@ export const reducer = createReducer(
     (state: MoviesState, { data }) =>
     ({
       ...state,
-      movies: [...state.movies, data]
+      movies: data
     }))
 
 );

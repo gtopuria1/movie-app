@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 
-export const loadMovies = createAction(
-  '[Movies] Load Moviess'
+export const searchMovies = createAction(
+  '[Movies] Search Movies', props<{ data: string }>()
 );
 
 export const loadMoviesSuccess = createAction(

@@ -8,6 +8,7 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { MoviesModule } from './movies/movies.module';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MoviesModule } from './movies/movies.module';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot(),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     MoviesModule
   ],
